@@ -77,9 +77,14 @@ var imagesArray :[UIImage] = []
     guard let pickedimage = info[.originalImage] as? UIImage else {
     fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
     }
-    
-        imagesArray = [pickedimage]
-    
+        print("before")
+       print(imagesArray.count)
+        imagesArray.append(pickedimage)
+        //imagesArray = [pickedimage]
+       print("after")
+        
+        print(imagesArray.count)
+        
         //if let pickedimage = (info [UIImagePickerControllerOriginalImage] as? UIImage){
            // imagesArray = [pickedimage]
             
