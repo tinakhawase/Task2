@@ -56,6 +56,8 @@ var imagesArray :[UIImage] = []
             self.present(picker, animated: true, completion: nil)
             
         }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style:.cancel,handler: nil))
 //        picker.delegate = self
 //        picker.allowsEditing = false
         
