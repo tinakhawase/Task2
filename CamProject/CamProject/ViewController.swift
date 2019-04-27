@@ -36,15 +36,39 @@ var imagesArray :[UIImage] = []
     
     
     
+    
     @IBAction func OpenCamera(_ sender: Any) {
         
         let picker:UIImagePickerController = UIImagePickerController()
-        picker.sourceType = .photoLibrary
-        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-        
         picker.delegate = self
         picker.allowsEditing = false
-        self.present(picker, animated: true, completion: nil)
+        //imagePickerController.delegate= self
+         let actionSheet = UIAlertController(title: "photo source", message: "Choose a Source"
+            , preferredStyle: .actionSheet)
+       
+        actionSheet.addAction(UIAlertAction(title: "PhotoLibrary", style: .default, handler: {(action:UIAlertAction)in picker.sourceType = .photoLibrary
+            self.present(picker, animated: true, completion: nil)
+            
+        }))
+      
+        
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: {(action:UIAlertAction)in picker.sourceType = .camera
+            self.present(picker, animated: true, completion: nil)
+            
+        }))
+//        picker.delegate = self
+//        picker.allowsEditing = false
+        
+        //picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        //
+        //
+        
+        //picker.sourceType = .camera
+        //picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .camera)!
+        //
+//        self.present(picker, animated: true, completion: nil)
+        self.present(actionSheet, animated: true, completion: nil)
+
     }
     
     func imagePickerController(_ picker: UIImagePickerController,
