@@ -16,7 +16,17 @@
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string></string>
+	<key>NSCameraUsageDescription</key>
+	<string>possible</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string></string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Possible</string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
 </dict>
 </plist>
